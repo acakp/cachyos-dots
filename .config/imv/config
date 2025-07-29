@@ -1,0 +1,5 @@
+[options]
+overlay_font = Hack Nerd Font:10
+
+[binds]
+<Tab> = overlay
