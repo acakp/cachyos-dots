@@ -45,3 +45,7 @@ i followed this guide to harden firefox: [Firefox Hardening Guide](https://brain
 ## zapret
 
 [a convenient way to install zapret on linux](https://github.com/Snowy-Fluffy/zapret.installer)
+
+## hx
+
+see my helix config in the helix-config repo
