@@ -22,11 +22,12 @@ my basic setup of cachyos (niriwm+waybar+fuzzel+foot+hx+)
 ## pacman with proxy
 
 to use pacman with proxy uncommnet this line in /etc/pacman.conf: `XferCommand = /usr/bin/wget --passive-ftp -c -O %o %u` 
+
 and then edit proxy settings in /etc/wgetrc, personally i add (uncomment) these lines:
-``
+```
 https_proxy = http://127.0.0.1:12334
 http_proxy = http://127.0.0.1:12334
-``
+```
 
 ## firefox
 
