@@ -85,10 +85,11 @@ input {
     // for the resolution.
     // If the mode is omitted altogether or is invalid, niri will pick one automatically.
     // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
-    mode "1600x900@60.030"
+    // mode "1600x900@60.030"
 
     // You can use integer or fractional scale, for example use 1.5 for 150% scale.
-    scale 2
+    // scale 2
+    scale 1
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
     // normal, 90, 180, 270, flipped, flipped-90, flipped-180 and flipped-270.
@@ -111,7 +112,7 @@ input {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 6
+    gaps 4
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -194,8 +195,9 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         // off
 
-        width 3
-        active-color "#326ee5"
+        width 1.5
+        // active-color "#326ee5"
+        active-color "#a70000"
         inactive-color "#505050"
 
         // Color of the border around windows that request your attention.
@@ -293,16 +295,6 @@ animations {
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
-
-// Work around WezTerm's initial configure bug
-// by setting an empty default-column-width.
-// window-rule {
-//     // This regular expression is intentionally made as specific as possible,
-//     // since this is the default config, and we want no false positives.
-//     // You can get away with just app-id="wezterm" if you want.
-//     match app-id=r#"^org\.wezfurlong\.wezterm$"#
-//     default-column-width {}
-// }
 
 // Open the Firefox picture-in-picture player as floating by default.
 window-rule {
