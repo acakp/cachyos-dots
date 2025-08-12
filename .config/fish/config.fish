@@ -7,8 +7,11 @@ if status is-interactive
     set fish_color_autosuggestion white
 
     # TDLib path to write telegram client
-    set CGO_CFLAGS -I/home/kitten/code/td/tdlib/include
-    set CGO_LDFLAGS "-Wl,-rpath,/home/kitten/code/td/tdlib/lib -L/home/kitten/code/td/tdlib/lib -ltdjson"
+    # set CGO_CFLAGS -I/home/kitten/code/td/tdlib/include
+    # set CGO_LDFLAGS "-Wl,-rpath,/home/kitten/code/td/tdlib/lib -L/home/kitten/code/td/tdlib/lib -ltdjson"
+
+    # to run electron-based apps directly on wayland
+    set ELECTRON_OZONE_PLATFORM_HINT auto
 
     alias lf="lfcd"
     alias hx="helix"
