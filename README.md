@@ -33,7 +33,7 @@ my basic setup of cachyos (niriwm+waybar+fuzzel+foot+hx+)
 
 ## pacman with proxy
 
-to use pacman with proxy uncommnet this line in /etc/pacman.conf: `XferCommand = /usr/bin/wget --passive-ftp -c -O %o %u` 
+to use pacman with proxy uncomment this line in /etc/pacman.conf: `XferCommand = /usr/bin/wget --passive-ftp -c -O %o %u` 
 
 and then edit proxy settings in /etc/wgetrc, personally i add (uncomment) these lines:
 ```
