@@ -1,0 +1,18 @@
+default-timeout=3000
+
+font=Adwaita Sans 10
+border-size=1
+border-radius=5
+
+background-color=#000000
+text-color=#cccccc
+border-color=#cccccc
+
+[urgency=low]
+border-color=#181818
+
+[urgency=normal]
+border-color=#adadad
+
+[urgency=high]
+border-color=#eb0000
