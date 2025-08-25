@@ -1,6 +1,8 @@
 source /usr/share/cachyos-fish-config/cachyos-config.fish
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    function fish_greeting
+        fastfetch -c examples/8
+    end
     set -gx EDITOR (type -p helix)
     export EDITOR=helix
 
@@ -17,8 +19,3 @@ if status is-interactive
     alias hx="helix"
     alias shut="sudo shutdown -h now"
 end
-# overwrite greeting
-# potentially disabling fastfetch
-#function fish_greeting
-#    # smth smth
-#end

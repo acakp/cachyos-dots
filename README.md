@@ -64,9 +64,21 @@ see my helix config in the helix-config repo
 
 ## system freezes after sleep
 
-in my case, disabling the freezing of user sessions during sleep helped. To do so, you need to add drop-in config file by this command: `sudo systemctl edit systemd-homed.service`
+In my case, disabling the freezing of user sessions during sleep helped. To do so, you need to add drop-in config files.
 
-and add these lines in opened file:
+Open systemd-homed.service config by this command: `sudo systemctl edit systemd-homed.service`
+
+And add these lines in opened file:
+
+```
+[Service]
+Environment="SYSTEMD_HOME_LOCK_FREEZE_SESSION=false"
+```
+
+Open systemd-suspend.service config by this command: `sudo systemctl edit systemd-suspend.service`
+
+And add these lines in opened file:
+
 ```
 [Service]
 Environment="SYSTEMD_SLEEP_FREEZE_USER_SESSIONS=false"
