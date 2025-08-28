@@ -18,8 +18,9 @@ input {
 
             // For example:
             layout "us,ru"
-            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
-            options "grp:caps_toggle,compose:ralt,ctrl:nocaps"
+            options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+            // options "grp:caps_toggle,compose:ralt,ctrl:nocaps"
+            // options "grp:caps_toggle,grp:win_space_toggle,compose:ralt,ctrl:nocaps"
         }
 
         // Enable numlock on startup, omitting this setting disables it.
@@ -140,9 +141,9 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.5; }
+    // default-column-width { proportion 0.5; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
-    // default-column-width {}
+    default-column-width {}
 
     // By default focus ring and border are rendered as a solid background rectangle
     // behind windows. That is, they will show up through semitransparent windows.
