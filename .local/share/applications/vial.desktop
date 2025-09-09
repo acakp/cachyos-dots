@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Vial
+GenericName=Vial
+Comment=Keyboard configuration software
+Exec=/home/bunny/.var/app/Vial075.AppImage
+Type=Application
+Terminal=false
+Icon=vial
