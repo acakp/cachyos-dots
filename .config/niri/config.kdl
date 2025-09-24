@@ -18,9 +18,9 @@ input {
 
             // For example:
             layout "us,ru"
-            options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+            // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
             // options "grp:caps_toggle,compose:ralt,ctrl:nocaps"
-            // options "grp:caps_toggle,grp:win_space_toggle,compose:ralt,ctrl:nocaps"
+            options "grp:caps_toggle,grp:win_space_toggle,compose:ralt,ctrl:nocaps"
         }
 
         // Enable numlock on startup, omitting this setting disables it.
@@ -266,7 +266,6 @@ layout {
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
 spawn-at-startup "waybar"
-// spawn-at-startup "hiddify"
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
 // If the client will specifically ask for CSD, the request will be honored.
@@ -353,7 +352,8 @@ binds {
     // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
 
     // wl-kbptr binds to control mouse pointer with keyboard
-    Mod+X repeat=false hotkey-overlay-title="Run wl-kbptr in floating mode" { spawn "wl-kbptr"; }
+    Mod+N repeat=false hotkey-overlay-title="Run wl-kbptr in floating mode" { spawn "wl-kbptr"; }
+    Mod+backspace repeat=false hotkey-overlay-title="Run wl-kbptr in floating mode" { spawn "wl-kbptr"; }
 
     // Example volume keys mappings for PipeWire & WirePlumber.
     // The allow-when-locked=true property makes them work even when the session is locked.
@@ -549,8 +549,8 @@ binds {
     // * adjust width as a percentage of screen width: "-10%" or "+10%"
     // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
     // set-column-width "100" will make the column occupy 200 physical screen pixels.
-    Mod+Minus { set-column-width "-10%"; }
-    Mod+Equal { set-column-width "+10%"; }
+    Mod+Z { set-column-width "-4%"; }
+    Mod+X { set-column-width "+4%"; }
 
     // Finer height adjustments when in column with other windows.
     Mod+Shift+Minus { set-window-height "-10%"; }

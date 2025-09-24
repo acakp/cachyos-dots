@@ -3,6 +3,7 @@
 SETUVAR __done_min_cmd_duration:10000
 SETUVAR __done_notification_urgency_level:low
 SETUVAR __fish_initialized:3800
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_color_autosuggestion:white
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:normal
@@ -31,6 +32,7 @@ SETUVAR fish_pager_color_description:yellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:normal\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR fish_user_paths:/home/bunny/go/bin
 SETUVAR pure_begin_prompt_with_current_directory:true
 SETUVAR pure_check_for_new_release:false
 SETUVAR pure_color_at_sign:pure_color_mute
@@ -89,7 +91,7 @@ SETUVAR pure_symbol_git_unpushed_commits:\u21e1
 SETUVAR pure_symbol_k8s_prefix:\u2638
 SETUVAR pure_symbol_nixdevshell_prefix:\u2744\ufe0f
 SETUVAR pure_symbol_prefix_root_prompt:\x23
-SETUVAR pure_symbol_prompt:\u276f
+SETUVAR pure_symbol_prompt:\x3e
 SETUVAR pure_symbol_reverse_prompt:\u276e
 SETUVAR pure_symbol_ssh_prefix:
 SETUVAR pure_symbol_title_bar_separator:\x2d

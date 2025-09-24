@@ -24,11 +24,12 @@ source=detect
 label_color=#ffffff
 label_select_color=#eb0000
 unselectable_bg_color=#00000000
-selectable_bg_color=#00000060
+selectable_bg_color=#00000080
 selectable_border_color=#ffffff60
+label_font_family=CaskaydiaCoveNerdFontMono
 # label_font_family=BlinkMacSystemFont
-label_font_family=Hack Nerd Font
-label_font_size=14 50% 18
+# label_font_family=Hack Nerd Font
+label_font_size=13 50% 18
 label_symbols=abcdefghijklmnopqrstuvwxyz
 
 [mode_bisect]
