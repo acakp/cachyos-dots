@@ -1,7 +1,7 @@
 source /usr/share/cachyos-fish-config/cachyos-config.fish
 if status is-interactive
     function fish_greeting
-        fastfetch -c examples/8
+        # fastfetch -c examples/8
     end
     # set -g fish_autosuggestion_enabled 0
     set -U fish_user_paths (go env GOPATH)/bin $fish_user_paths # add ~/go/bin to PATH
@@ -15,5 +15,7 @@ if status is-interactive
 
     alias lf="lfcd"
     alias hx="helix"
+    alias zj="zellij"
+    alias zjw="zellij -l welcome"
     alias shut="sudo shutdown -h now"
 end
