@@ -1,0 +1,11 @@
+[Unit]
+Description=Disable gpe6E that causes hight cpu usage for no reason
+
+[Service]
+ExecStart=echo "disable" > /sys/firmware/acpi/interrupts/gpe6E
+User=root
+Type=oneshot
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

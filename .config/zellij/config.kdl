@@ -127,6 +127,10 @@ keybinds clear-defaults=true {
         bind "Alt down" "Alt j" { MoveFocus "down"; }
         bind "Alt up" "Alt k" { MoveFocus "up"; }
         bind "Alt right" "Alt l" { MoveFocus "right"; }
+        bind "Alt Ctrl left" "Alt Ctrl h" { MovePane "left"; }
+        bind "Alt Ctrl down" "Alt Ctrl j" { MovePane "down"; }
+        bind "Alt Ctrl up" "Alt Ctrl k" { MovePane "up"; }
+        bind "Alt Ctrl right" "Alt Ctrl l" { MovePane "right"; }
         bind "Alt +" { Resize "Increase"; }
         bind "Alt =" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
@@ -396,20 +400,20 @@ web_client {
 //   - true (default)
 //   - false
 // 
-// session_serialization false
+session_serialization false
  
 // Whether pane viewports are serialized along with the session, default is false
 // Options:
 //   - true
 //   - false (default)
 // 
-// serialize_pane_viewport false
+serialize_pane_viewport true
  
 // Scrollback lines to serialize along with the pane viewport when serializing sessions, 0
 // defaults to the scrollback size. If this number is higher than the scrollback size, it will
 // also default to the scrollback size. This does nothing if `serialize_pane_viewport` is not true.
 // 
-// scrollback_lines_to_serialize 10000
+scrollback_lines_to_serialize 1000
  
 // Enable or disable the rendering of styled and colored underlines (undercurl).
 // May need to be disabled for certain unsupported terminals
@@ -427,7 +431,7 @@ web_client {
 // (Requires restart)
 // Default: false
 // 
-// disable_session_metadata false
+disable_session_metadata true
  
 // Enable or disable support for the enhanced Kitty Keyboard Protocol (the host terminal must also support it)
 // (Requires restart)
