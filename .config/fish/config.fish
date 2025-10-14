@@ -10,12 +10,11 @@ if status is-interactive
 
     set fish_color_autosuggestion white
 
-    # to run electron-based apps directly on wayland
-    set ELECTRON_OZONE_PLATFORM_HINT auto
+    set ELECTRON_OZONE_PLATFORM_HINT auto # to run electron-based apps directly on wayland
+    zoxide init fish | source
 
     alias lf="lfcd"
     alias hx="helix"
-    alias zj="zellij"
-    alias zjw="zellij -l welcome"
+    alias cd="z"
     alias shut="sudo shutdown -h now"
 end

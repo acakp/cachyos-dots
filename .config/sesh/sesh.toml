@@ -1,0 +1,7 @@
+[default_session]
+startup_command = "ls {}"
+
+[[session]]
+name = "tmux config"
+path = "~/.config/tmux"
+startup_command = "helix tmux.conf"

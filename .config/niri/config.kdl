@@ -197,7 +197,7 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         // off
 
-        width 1.5
+        width 2.5
         // active-color "#326ee5"
         active-color "#a70000"
         inactive-color "#505050"
