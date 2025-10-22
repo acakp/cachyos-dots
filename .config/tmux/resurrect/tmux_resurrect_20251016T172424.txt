@@ -1,0 +1,10 @@
+pane	dn	0	1	:*	0	~/code/dn: hx . - hx	:/home/bunny/code/dn	1	helix	:helix .
+pane	dn	0	1	:*	1	~/code/dn: hx . - hx	:/home/bunny/code/dn	0	helix	:helix .
+pane	dn	1	0	:-	0	~/code/dn - fish	:/home/bunny/code/dn	1	fish	:
+pane	dn	1	0	:-	1	~/code/dn/dn: lf - lf	:/home/bunny/code/dn/dn	0	fish	:lf -print-last-dir
+pane	tmux config	0	1	:*	0	~/code/cachyos-dots/.config/tmux - fish	:/home/bunny/code/cachyos-dots/.config/tmux	1	fish	:
+pane	tmux config	0	1	:*	1	~/code/cachyos-dots/.config/tmux/resurrect - fish	:/home/bunny/code/cachyos-dots/.config/tmux/resurrect	0	fish	:
+window	dn	0	:helix	1	:*	e988,173x40,0,0{86x40,0,0,10,86x40,87,0,14}	:
+window	dn	1	:fish	0	:-	09b5,173x40,0,0[173x20,0,0,11,173x19,0,21,12]	:
+window	tmux config	0	:fish	1	:*	7a04,115x40,0,0{57x40,0,0,8,57x40,58,0,9}	:
+state	dn	

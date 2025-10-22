@@ -1,0 +1,15 @@
+pane	0	0	1	:*	0	~ - fish	:/home/bunny	1	fish	:
+pane	phone-number-normalizer	0	1	:*	0	~/code/phone-number-normalizer - fish	:/home/bunny/code/phone-number-normalizer	1	fish	:
+pane	trpo	0	1	:*	0	~/code/trpo - fish	:/home/bunny/code/trpo	1	fish	:
+pane	trpo-website	0	1	:*	0	~/code/trpo-website: lf -print-last-dir - lf	:/home/bunny/code/trpo-website	0	fish	:lf -print-last-dir -print-last-dir
+pane	trpo-website	0	1	:*	1	~/code/trpo-website: lf -print-last-dir - lf	:/home/bunny/code/trpo-website	1	fish	:lf -print-last-dir -print-last-dir
+pane	trpo-website	1	0	:-	0	~/code/trpo-website: lf -print-last-dir - lf	:/home/bunny/code/trpo-website	1	fish	:lf -print-last-dir -print-last-dir
+pane	trpo-website	2	0	:	0	~/code/trpo-website - fish	:/home/bunny/code/trpo-website	1	fish	:
+pane	trpo-website	2	0	:	1	~/code/trpo - fish	:/home/bunny/code/trpo	0	fish	:
+window	0	0	:fish	1	:*	aa9e,79x40,0,0,1	:
+window	phone-number-normalizer	0	:fish	1	:*	aa9d,79x40,0,0,0	:
+window	trpo	0	:fish	1	:*	aa9f,79x40,0,0,2	:
+window	trpo-website	0	:coursereview	1	:*	180b,79x40,0,0{39x40,0,0,3,39x40,40,0,4}	off
+window	trpo-website	1	:learn	0	:-	aaa2,79x40,0,0,5	off
+window	trpo-website	2	:serv	0	:	d908,79x40,0,0{57x40,0,0,6,21x40,58,0,7}	off
+state	phone-number-normalizer	
