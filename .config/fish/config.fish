@@ -16,5 +16,6 @@ if status is-interactive
     alias lf="lfcd"
     alias hx="helix"
     alias cd="z"
-    alias shut="sudo shutdown -h now"
+    # alias shut="sudo shutdown -h now"
+    alias shut="systemctl poweroff"
 end

@@ -66,8 +66,8 @@ input {
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    // focus-follows-mouse max-scroll-amount="0%"
-    focus-follows-mouse
+    focus-follows-mouse max-scroll-amount="20%"
+    // focus-follows-mouse
 }
 
 // You can configure outputs by their name, which you can find
@@ -114,7 +114,8 @@ input {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
-    gaps 3
+    // gaps 3
+    gaps 0
 
     // When to center a column when changing focus, options are:
     // - "never", default behavior, focusing an off-screen column will keep at the left
@@ -307,6 +308,28 @@ window-rule {
     open-floating true
 }
 
+window-rule {
+    // Match all Telegram windows...
+    match app-id=r#"^org\.telegram\.desktop$"#
+
+    // ...except the media viewer window.
+    exclude title="^Media viewer$"
+
+    // Properties to apply.
+     default-column-width { proportion 0.1; }
+}
+
+window-rule {
+    match is-floating=true
+    
+    border {
+        active-color "#666cff"
+        inactive-color "#B2B5F9"
+    }
+    geometry-corner-radius 8
+    clip-to-geometry true
+}
+
 // Example: block out two password managers from screen capture.
 // (This example rule is commented out with a "/-" in front.)
 /-window-rule {
@@ -321,13 +344,19 @@ window-rule {
 
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
-window-rule {
-    geometry-corner-radius 5
-    clip-to-geometry true
-}
+// window-rule {
+//     geometry-corner-radius 5
+//     clip-to-geometry true
+// }
 
 hotkey-overlay {
     skip-at-startup
+}
+
+gestures {
+    hot-corners {
+        off
+    }
 }
 
 binds {

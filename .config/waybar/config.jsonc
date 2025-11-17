@@ -2,100 +2,82 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 25, // Waybar height (to be removed for auto height)
+    "height": 13, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 9, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "niri/workspaces",
-        "niri/window",
+        "cpu",
+        "temperature",
+        "memory",
+        "disk",
     ],
     "modules-center": [
+        "niri/language",
     ],
     "modules-right": [
         "tray",
-        "idle_inhibitor",
-        "power-profiles-daemon",
-        "niri/language",
         "pulseaudio",
         "network",
         "bluetooth",
-        "cpu",
-        "memory",
-        "temperature",
         "backlight",
         "battery",
         "clock",
     ],
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        }
-    },
     "tray": {
-        // "icon-size": 21,
-        "spacing": 0
+        "icon-size": 10,
+        "spacing": 9
     },
     "clock": {
         // "timezone": "America/New_York",
-        "format": "{:%a %b %d   %H:%M}",
+        "format": "{:%a %b %d %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "  {usage}%",
+        "format": "cpu:{usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "   {}%"
+        "format": "mem:{used}/{total}GiB"
+    },
+    "disk": {
+        "interval": 120,
+        "format": "disk:{free} is free",
     },
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", "!"]
+        // "format-critical": "temp:{temperatureC}°C!!!",
+        "format": "temp:{temperatureC}°C",
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{icon}  {percent}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
+        "format": "backlight:{percent}%",
     },
     "battery": {
         "states": {
             // "good": 95,
             "warning": 30,
-            "critical": 15
+            "critical": 20
         },
-        "format": "{icon}   {capacity}%",
-        "format-full": "{icon}   full",
-        "format-charging": "{icon}   {capacity}%",
-        "format-plugged": " {capacity}%",
+        "events": {
+           "on-discharging-critical": "notify-send -u critical 'Very Low Battery'",
+        },
+        "format": "bat:{capacity}%",
+        "format-full": "",
+        "format-charging": "bat:+{capacity}%",
+        "format-plugged": "bat:+{capacity}%",
         // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
     },
 
-    "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
-        "default": "",
-        "performance": "",
-        "balanced": "",
-        "power-saver": ""
-      }
-    },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "   {essid} ({signalStrength}%)",
-        "format-ethernet": "  {ipaddr}/{cidr}",
-        "tooltip-format": "  {ifname} via {gwaddr}",
-        "format-linked": "  {ifname} (No IP)",
+        "format-wifi": "wifi:{essid}({signalStrength}%)",
+        "format-ethernet": "wifi:{ipaddr}/{cidr}",
+        "tooltip-format": "wifi:{ifname} via {gwaddr}",
+        "format-linked": "wifi:{ifname}(No IP)",
         "format-disconnected": "⚠ disconnected",
         "format-disabled": "⚠ disabled",
         // "format-alt": "{ifname}: {ipaddr}/{cidr}",
@@ -103,24 +85,16 @@
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{icon}  {volume}%  {format_source}",
-        "format-bluetooth": "󰂰 {volume}%  {format_source}",
-        "format-bluetooth-muted": "󰂲  {format_source}",
-        "format-muted": "  {format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "󱡏",
-            "headset": "󰋎",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", " ", " "]
-        },
+        "format": "vol:{volume}% {format_source}",
+        "format-bluetooth": "󰂰:{volume}%  {format_source}",
+        "format-bluetooth-muted": "󰂲:{format_source}",
+        "format-muted": "vol:muted",
+        "format-source": "mic:{volume}%",
+        "format-source-muted": "mic:muted",
         "on-click": "pavucontrol"
     },
     "bluetooth": {
-        "on-click": "foot bluetui"
-    }
+        "format": "bt:{status}",
+        "on-click": "foot bluetui",
+    },
 }
