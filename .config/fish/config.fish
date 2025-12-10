@@ -13,6 +13,8 @@ if status is-interactive
     set ELECTRON_OZONE_PLATFORM_HINT auto # to run electron-based apps directly on wayland
     zoxide init fish | source
 
+    set HTTP_PROXY http://127.0.0.1:12334 # set system proxy (for flatpak)
+
     alias lf="lfcd"
     alias hx="helix"
     alias cd="z"

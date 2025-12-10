@@ -5,17 +5,17 @@
 
 [general]
 home_row_keys=jkl;asdfcvb
-# modes=tile,tile, click
-modes=floating,click
+modes=tile,split,click
+# modes=floating,click
 cancellation_status_code=0
 
 [mode_tile]
-label_color=#fffd
+label_color=#eb0000
 label_select_color=#fd0d
 unselectable_bg_color=#2226
 selectable_bg_color=#0304
 selectable_border_color=#040c
-label_font_family=Hack Nerd Font
+label_font_family=RobotoMono Nerd Font
 label_font_size=18 45% 18
 label_symbols=abcdefghijklmnopqrstuvwxyz
 
@@ -37,7 +37,7 @@ label_font_family=RobotoMono Nerd Font
 [mode_bisect]
 label_color=#fffd
 label_font_size=6
-label_font_family=Hack Nerd Font
+label_font_family=RobotoMono Nerd Font
 label_padding=12
 pointer_size=20
 pointer_color=#e22d
