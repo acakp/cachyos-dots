@@ -4,5 +4,5 @@ After=graphical-session.target
 Requisite=graphical-session.target
 
 [Service]
-ExecStart=/usr/bin/swayidle -w timeout 1201 'niri msg action power-off-monitors' timeout 1200 'swaylock -f -i ~/Pictures/wallpapers/black-rock-shooter.jpg' before-sleep 'swaylock -f -i ~/Pictures/wallpapers/black-rock-shooter.jpg'
+ExecStart=/usr/bin/swayidle -w timeout 1201 'niri msg action power-off-monitors' timeout 1200 'swaylock -f -s fit -i ~/Pictures/wallpapers/newgen/brs3.jpg' before-sleep 'swaylock -f -s fit -i ~/Pictures/wallpapers/newgen/brs3.jpg'
 Restart=on-failure
