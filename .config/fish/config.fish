@@ -11,11 +11,17 @@ if status is-interactive
 
     set fish_color_autosuggestion white
 
-    set ELECTRON_OZONE_PLATFORM_HINT auto # to run electron-based apps directly on wayland
+    set -gx ELECTRON_OZONE_PLATFORM_HINT auto # to run electron-based apps directly on wayland
     set USER_GID -g id
     zoxide init fish | source
 
-    set HTTP_PROXY http://127.0.0.1:12334 # set system proxy (for flatpak)
+    # set system proxy
+    set -gx HTTP_PROXY socks5h://127.0.0.1:12334
+    set -gx HTTPS_PROXY socks5h://127.0.0.1:12334
+    set -gx ALL_PROXY socks5h://127.0.0.1:12334
+    set -gx http_proxy socks5h://127.0.0.1:12334
+    set -gx https_proxy socks5h://127.0.0.1:12334
+    set -gx all_proxy socks5h://127.0.0.1:12334
 
     alias lf="lfcd"
     alias hx="helix"
@@ -23,4 +29,5 @@ if status is-interactive
     # alias shut="sudo shutdown -h now"
     alias shut="systemctl poweroff"
     alias chrome="flatpak run io.github.ungoogled_software.ungoogled_chromium --proxy-server=\"http://127.0.0.1:12334\""
+    alias codex="proxychains4 codex"
 end
