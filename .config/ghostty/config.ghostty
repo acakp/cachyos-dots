@@ -1,0 +1,7 @@
+background = 000000
+cursor-color = cell-foreground
+font-family = RobotoMono Nerd Font
+font-size = 11
+mouse-hide-while-typing = true
+
+# sadly cursor shaders doesn't work properly in helix
