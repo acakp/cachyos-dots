@@ -1,0 +1,5 @@
+[mgr]
+append_keymap = [
+	{ on = [ "g", "w" ], run = "cd --interactive", desc = "Jump interactively" },
+	{ on = "e", run = "open", desc = "Open selected files" },
+]

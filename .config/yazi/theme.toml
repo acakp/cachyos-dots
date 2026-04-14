@@ -1,0 +1,7 @@
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+
+[mode]
+normal_main = { bg = "#181818" }
+normal_alt = { bg = "#181818" }

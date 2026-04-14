@@ -1,0 +1,8 @@
+[mgr]
+show_hidden = true
+ratio = [1, 2, 2]
+
+[opener]
+play = [
+  { run = "mpv %s", orphan = true, for = "unix" },
+]

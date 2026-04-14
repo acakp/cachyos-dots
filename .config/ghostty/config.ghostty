@@ -1,3 +1,4 @@
+theme = Kitty Default
 background = 000000
 cursor-color = cell-foreground
 font-family = RobotoMono Nerd Font
