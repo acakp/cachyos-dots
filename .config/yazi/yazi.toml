@@ -1,6 +1,6 @@
 [mgr]
 show_hidden = true
-ratio = [1, 2, 2]
+ratio = [3, 6, 11]
 
 [opener]
 play = [
