@@ -16,12 +16,13 @@ if status is-interactive
     zoxide init fish | source
 
     # set system proxy
-    set -gx HTTP_PROXY http://127.0.0.1:12334
-    set -gx HTTPS_PROXY http://127.0.0.1:12334
-    set -gx ALL_PROXY http://127.0.0.1:12334
-    set -gx http_proxy http://127.0.0.1:12334
-    set -gx https_proxy http://127.0.0.1:12334
-    set -gx all_proxy http://127.0.0.1:12334
+    # set -gx HTTP_PROXY http://127.0.0.1:12334
+    # set -gx HTTPS_PROXY http://127.0.0.1:12334
+    # set -gx ALL_PROXY http://127.0.0.1:12334
+    # set -gx http_proxy http://127.0.0.1:12334
+    # set -gx https_proxy http://127.0.0.1:12334
+    # set -gx all_proxy http://127.0.0.1:12334
+    # set -gx NO_PROXY 127.0.0.1
     # set -gx HTTP_PROXY socks5h://127.0.0.1:12334
     # set -gx HTTPS_PROXY socks5h://127.0.0.1:12334
     # set -gx ALL_PROXY socks5h://127.0.0.1:12334

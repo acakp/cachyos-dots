@@ -1,0 +1,13 @@
+[Unit]
+Description=NaiveProxy Client
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/naiveproxy/naive /opt/naiveproxy/config.json
+Restart=always
+RestartSec=5
+LimitNOFILE=1048576
+
+[Install]
+WantedBy=default.target
