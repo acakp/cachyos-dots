@@ -5,5 +5,5 @@ Requisite=graphical-session.target
 
 [Service]
 # ExecStart=/usr/bin/swaybg -i "%h/Pictures/wallpapers/miku2.png"
-ExecStart=/usr/bin/swaybg -i "%h/Pictures/wallpapers/hampton_court_green.jpg"
+ExecStart=/usr/bin/swaybg -m fit -i "%h/Pictures/wallpapers/hampton_court_green.jpg"
 Restart=on-failure
